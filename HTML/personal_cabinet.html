@@ -12,7 +12,7 @@
         <div>
             <header>
                 <img src="../images/logo.png" id="logo" width="140px" height="140px">
-                <button id="text_logo" onclick="pageRedirect('main_page')">Московский Государственный Университет</button>
+                <button id="text_logo" onclick="pageRedirect('main_page_from_cabinet')">Московский Государственный Университет</button>
                 <button id="registration" onclick="pageRedirect('registration')">Регистрация</button>
             </header>
         </div>
@@ -26,15 +26,6 @@
             <button type="submit" id="button_login" onclick="Login()">Войти</button>
         </form>
         <form id ="personal_cabinet">
-            <div id="avatar_container">
-                <img id ="avatar">
-                <div id="err"></div>
-                <input type="file" id="photo" block>
-                <button id="send_photo">Загрузить фото</button>
-            </div>
-            <div>
-                <button id="logout">Выйти</button>
-            </div>
             <div id="block_menu">
                 <div id="block">
                     Здравствуйте, <span id="first_name"></span> 
@@ -42,6 +33,16 @@
                     <span id="role"></span>
                 </div>
             </div>
+            
+            <img id ="avatar" src="../images/empty_avatar.png"/>
+            <div id="err"></div>
+            <input type="file" id="photo" block>
+            <button id="send_photo">Загрузить фото</button>
+            
+            <div>
+                <button id="logout">Выйти</button>
+            </div>
+            
         </form>
     </body>
     <script src="../JS/SendForm.js"></script>

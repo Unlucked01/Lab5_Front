@@ -54,30 +54,25 @@ async function Login(){
     formElem.onsubmit = async (er) => {
         er.preventDefault();
         
-        /*
-        let check = await SendJSONRegistration();
-        console.log(check);
-        
-        
-        if (check) {
-            window.location.href = 'newpage.html';
-        } else {
-
-        }
-        */
     };
 }
 
 async function pageRedirect(page_name){
     switch(page_name){
-        case "personal_cabinet":
-            window.location.href = "HTML/personal_cabinet.html";
+        case "personal_cabinet_from_main_page":
+            window.location.href = "../HTML/personal_cabinet.html";
             break;
-        case "main_page":
+        case "main_page_from_cabinet":
+            window.location.href = "../HTML/main_page.html";
+            break;
+        case "main_page_from_index":
             window.location.href = "HTML/main_page.html";
             break;
         case "registration":
             window.location.href = "../index.html";
+            break;
+        case "personal_cabinet_from_index":
+            window.location.href = "HTML/personal_cabinet.html";
             break;
     }
 }

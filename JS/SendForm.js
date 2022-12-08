@@ -43,15 +43,3 @@ function getFormRegis(){
 	};
 	return data;
 }
-
-/*
-function checkForm(data){
-	let check = true;
-	for (let elem in data){
-		if (data[elem] === ""){
-			check = false;
-			break;
-		}
-	}
-	return check;
-}*/
