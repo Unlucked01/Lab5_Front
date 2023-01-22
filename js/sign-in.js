@@ -7,7 +7,7 @@ document.getElementById('button_login').addEventListener('click', e => {
         "password": document.getElementById('password').value
     }
 
-    const url = 'http://localhost:8080/auth/signin'
+    const url = 'http://localhost:8888/auth/signin'
 
     fetch(url, {
         method: 'POST',
@@ -17,7 +17,7 @@ document.getElementById('button_login').addEventListener('click', e => {
         if (response.ok) {
             let data = await response.json()
             sessionStorage.setItem('token', data.message)
-            document.location.replace('Poor_Frontend/' + '../html/personal_cabinet.html')
+            document.location.replace('../html/personal_cabinet.html')
         } else if (response.status == 403) {
             let errorEl = document.getElementById('error-log')
             errorEl.textContent = 'Введены неверные учетные данные'
